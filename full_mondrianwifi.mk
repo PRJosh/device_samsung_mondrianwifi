@@ -29,7 +29,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 PRODUCT_NAME := mondrianwifi
 PRODUCT_DEVICE := mondrianwifi
 PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
+PRODUCT_MANUFACTURER := Samsung
 PRODUCT_MODEL := SM-T320
 
 $(call inherit-product, device/samsung/mondrianwifi/device.mk)
