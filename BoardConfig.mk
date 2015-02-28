@@ -96,7 +96,24 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_USES_MMCUTILS := true
-TARGET_RECOVERY_FSTAB := device/samsung/mondrianwifi/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/samsung/mondrianwifi/rootdir/etc/twrp.fstab
+
+BOARD_SUPPRESS_SECURE_ERASE := true
+
+# TWRP 
+DEVICE_RESOLUTION := 1600x2560
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness 
+TW_MAX_BRIGHTNESS := 255
+TW_NO_REBOOT_BOOTLOADER := true
+TW_HAS_DOWNLOAD_MODE := true
+TARGET_RECOVERY_QCOM_RTC_FIX := true
+TW_MTP_DEVICE := /dev/usb_mtp_gadget
+TW_INCLUDE_CRYPTO := true
+TW_EXCLUDE_SUPERSU := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
